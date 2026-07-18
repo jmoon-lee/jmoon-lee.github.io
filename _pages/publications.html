@@ -32,7 +32,7 @@ author_profile: true
         {% if post.paperurl %}
           <a href="{{ post.paperurl }}"
              target="_blank"
-             rel="noopener noreferrer">[link]</a>
+             rel="noopener noreferrer">[link]</a>{% if post.corresponding %}<sup>*</sup>{% endif %}
         {% endif %}
       </p>
     {% endfor %}
