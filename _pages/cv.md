@@ -1,10 +1,9 @@
 ---
-permalink: /
+layout: archive
 title: "CV"
+permalink: /cv/
 author_profile: true
 redirect_from:
-  - /cv/
-  - /cv.md
+  - /resume
 ---
-
 [Download my CV](/files/Jaemoon_Lee_CV.pdf)
