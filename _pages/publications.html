@@ -1,21 +1,3 @@
----
-layout: archive
-title: "Publications"
-permalink: /publications/
-author_profile: true
----
-
-{% if site.author.googlescholar %}
-<p>
-  You can also find my articles on
-  <a href="{{ site.author.googlescholar }}"
-     target="_blank"
-     rel="noopener noreferrer">
-    my Google Scholar profile
-  </a>.
-</p>
-{% endif %}
-
 {% for category in site.publication_category %}
   {% assign category_key = category[0] %}
   {% assign category_posts = site.publications
@@ -26,18 +8,36 @@ author_profile: true
   {% if category_posts.size > 0 %}
     <h2>{{ category[1].title }}</h2>
 
+    {% assign has_marked_author = false %}
+
     {% for post in category_posts %}
       <p>
         {{ post.citation }}
+
         {% if post.paperurl %}
           <a href="{{ post.paperurl }}"
              target="_blank"
-             rel="noopener noreferrer">[link]</a>{% if post.corresponding %}<sup>*</sup>{% endif %}
+             rel="noopener noreferrer">[link]</a>
+        {% endif %}
+
+        {% if post.author_role == "corresponding"
+           or post.author_role == "first" %}
+          <sup>*</sup>
+          {% assign has_marked_author = true %}
         {% endif %}
       </p>
     {% endfor %}
+
+    {% if has_marked_author %}
+      {% if category_key == "manuscripts" %}
+        <p class="publication-note">
+          <sup>*</sup> Corresponding author
+        </p>
+      {% elsif category_key == "conferences" %}
+        <p class="publication-note">
+          <sup>*</sup> First author
+        </p>
+      {% endif %}
+    {% endif %}
   {% endif %}
-<p style="font-size: 0.85em;">
-  <sup>*</sup> Corresponding author
-</p>
 {% endfor %}
