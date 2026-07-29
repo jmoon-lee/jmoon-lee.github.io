@@ -18,7 +18,7 @@ My research interests include:
 
 ## Academic Background
 
-**M.S.–Ph.D. Integrated Program in Mathematics**  
+**Integrated M.S.–Ph.D. Program in Mathematics**  
 Department of Mathematical Sciences, Seoul National University<br>
 March 2025–Present<br>
 Advisor: Professor Seung-Yeal Ha
