@@ -35,6 +35,14 @@ author_profile: true
 
     {% for post in category_posts %}
       <p>
+        {% if post.author_role == "corresponding" %}
+          <sup>*</sup>
+          {% assign has_marked_author = true %}
+        {% elsif post.author_role == "first" %}
+          <sup>*</sup>
+          {% assign has_marked_author = true %}
+        {% endif %}
+        
         {% if post.citation %}
           {{ post.citation }}
         {% else %}
@@ -45,14 +53,6 @@ author_profile: true
           <a href="{{ post.paperurl }}"
              target="_blank"
              rel="noopener noreferrer">[link]</a>
-        {% endif %}
-
-        {% if post.author_role == "corresponding" %}
-          <sup>*</sup>
-          {% assign has_marked_author = true %}
-        {% elsif post.author_role == "first" %}
-          <sup>*</sup>
-          {% assign has_marked_author = true %}
         {% endif %}
       </p>
     {% endfor %}
