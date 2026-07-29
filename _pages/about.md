@@ -7,7 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-Hello, I am Jaemoon Lee, a Ph.D. student in the Department of Mathematical Sciences at Seoul National University. I am a member of the HYKE research group, led by Professor Seung-Yeal Ha.
+Hello, I am Jaemoon Lee, a Ph.D. student in the Department of Mathematical Sciences at Seoul National University. I am a member of the
+<a href="http://hyke.snu.ac.kr/" target="_blank" rel="noopener noreferrer">HYKE</a>
+research group, led by Professor Seung-Yeal Ha.
 
 My research interests include:
 
