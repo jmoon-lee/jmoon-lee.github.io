@@ -6,4 +6,4 @@ author_profile: true
 redirect_from:
   - /resume
 ---
-[Download my CV](/files/Jaemoon_Lee_CV.pdf)
+[Download my CV](/files/CV.pdf)
