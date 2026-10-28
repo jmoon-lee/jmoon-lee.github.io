@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Jaemoon Lee's homepage"
+title : "Jaemoon Lee&#x27;s homepage"
 title_separator          : "-"
-name                     : &name "Jaemoon Lee"
-description              : &description "Jaemoon Lee's academic homepage"   # Update this with a general description of your site, this is the default if not overridden by a page
+name : &name "Jaemoon Lee"
+description : &description "Jaemoon Lee&#x27;s academic homepage"
 url                      : https://jmoon-lee.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -23,14 +23,14 @@ repository               : "jmoon-lee/jmoon-lee.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpg"
-  name             : "Jaemoon Lee"
+  avatar : "profile.jpg"
+  name : "Jaemoon Lee"
   pronouns         : # example: "she/her"  
   bio              : #
-  location         : "South Korea, Seoul"
-  employer         : "Seoul National University"
+  location : "South Korea, Seoul"
+  employer : "Seoul National University"
   uri              : # URL
-  email            : "dlwoans0001@snu.ac.kr" 
+  email : "dlwoans0001@gmail.com"
 
   # Academic websites
   academia         : # URL
@@ -38,7 +38,7 @@ author:
   googlescholar    : # URL
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : # URL
+  orcid : "https://orcid.org/0009-0007-6135-6624"
   semantic         : # URL
   ssrn             : # URL
   pubmed           : # URL
@@ -84,14 +84,13 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
   manuscripts:
-    title: 'Journal Articles'    
+    title: Journal Articles and Accepted Papers
   conferences:
-    title: 'Conference Papers'
+    title: Conference Publications
+  preprints:
+    title: Preprints and Submitted Manuscripts
 
-# Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160

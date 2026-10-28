@@ -1,10 +1,12 @@
 ---
-title: "AMPED: Adaptive Multi-objective Projection for balancing Exploration and skill Diversification"
+title: 'AMPED: Adaptive multi-objective projection for balancing exploration and skill diversification'
 collection: publications
 category: conferences
-date: 2026-1-26
-paperurl: "https://arxiv.org/abs/2506.05980"
+editor_order: 2
+citation: 'G. Cho, <strong>J. Lee</strong>, J. Im, S. Lee, J. Lee, and S. Kim, AMPED: Adaptive multi-objective projection for balancing exploration and skill diversification. <em>International Conference on Learning Representations (ICLR)</em>, 14, (2026).'
+paperurl: https://openreview.net/forum?id=U8A5nGuw7M
 author_role: first
-citation: >-
-  G. Cho, J. Lee, J. Im, S. Lee, J. Lee, S. Kim, AMPED: Adaptive Multi-objective Projection for balancing Exploration and skill Diversification, International Conference on Learning Representations 14, (2026).
+date: '2026-01-26'
 ---
+
+

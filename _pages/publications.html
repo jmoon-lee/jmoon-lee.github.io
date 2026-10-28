@@ -1,83 +1,33 @@
 ---
 layout: archive
-title: "Publications"
+title: Publications
 permalink: /publications/
 author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-<p>
-  You can also find my articles on
-  <a href="{{ site.author.googlescholar }}"
-     target="_blank"
-     rel="noopener noreferrer">
-    my Google Scholar profile
-  </a>.
-</p>
+<p>You can also find my articles on <a href="{{ site.author.googlescholar | escape }}" target="_blank" rel="noopener noreferrer">my Google Scholar profile</a>.</p>
 {% endif %}
-
 {% for category in site.publication_category %}
-
-  {% assign category_key = category[0] %}
-  {% assign category_title = category[1].title %}
-
-  {% assign category_posts = site.publications
-    | where: "category", category_key
-    | sort: "date"
-    | reverse
-  %}
-
-  {% if category_posts.size > 0 %}
-
-    <h2>{{ category_title }}</h2>
-
-    {% assign has_marked_author = false %}
-
-    {% for post in category_posts %}
+  {% assign entries = site.publications | where: "category", category[0] | sort: "editor_order" %}
+  {% if entries.size > 0 %}
+    <h2>{{ category[1].title }}</h2>
+    {% assign has_corresponding = false %}
+    {% assign has_first = false %}
+    {% for post in entries %}
       <p>
-        {% if post.author_role == "corresponding" %}
-          <sup>*</sup>
-          {% assign has_marked_author = true %}
-        {% elsif post.author_role == "first" %}
-          <sup>*</sup>
-          {% assign has_marked_author = true %}
-        {% endif %}
-        
-        {% if post.citation %}
-          {{ post.citation }}
-        {% else %}
-          {{ post.title }}
-        {% endif %}
-
-        {% if post.paperurl %}
-          <a href="{{ post.paperurl }}"
-             target="_blank"
-             rel="noopener noreferrer">[link]</a>
-        {% endif %}
+        {% if post.author_role == "corresponding" %}<sup>*</sup>{% assign has_corresponding = true %}{% endif %}
+        {% if post.author_role == "first" %}<sup>†</sup>{% assign has_first = true %}{% endif %}
+        {{ post.citation }}
+        {% if post.paperurl != "" %}<a href="{{ post.paperurl | escape }}" target="_blank" rel="noopener noreferrer">[link]</a>{% endif %}
       </p>
     {% endfor %}
-
-    {% if has_marked_author %}
-
-      {% if category_key == "manuscripts"
-         or category_key == "journals"
-         or category_key == "journal" %}
-
-        <p style="font-size: 0.85em; margin-top: -0.5em;">
-          <sup>*</sup> Corresponding author
-        </p>
-
-      {% elsif category_key == "conferences"
-         or category_key == "conference" %}
-
-        <p style="font-size: 0.85em; margin-top: -0.5em;">
-          <sup>*</sup> First author
-        </p>
-
-      {% endif %}
-
+    {% if has_corresponding or has_first %}
+      <p style="font-size: 0.85em; margin-top: -0.5em;">
+        {% if has_corresponding %}<sup>*</sup> Corresponding author{% endif %}
+        {% if has_corresponding and has_first %}&nbsp;&nbsp;{% endif %}
+        {% if has_first %}<sup>†</sup> First author{% endif %}
+      </p>
     {% endif %}
-
   {% endif %}
-
 {% endfor %}
