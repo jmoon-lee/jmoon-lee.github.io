@@ -16,6 +16,7 @@ author_profile: true
     {% assign has_first = false %}
     {% for post in entries %}
       <p>
+        <span class="publication-number">{{ forloop.rindex }}.</span>
         {% if post.author_role == "corresponding" %}<sup>*</sup>{% assign has_corresponding = true %}{% endif %}
         {% if post.author_role == "first" %}<sup>†</sup>{% assign has_first = true %}{% endif %}
         {{ post.citation }}
